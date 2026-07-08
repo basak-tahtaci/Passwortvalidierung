@@ -6,3 +6,4 @@ Hier werden die Regeln für unsere Passwort-Policy definiert:
 * Mindestens 8 Zeichen Länge
 * Mindestens eine Ziffer (0-9)
 * Groß- und Kleinbuchstaben müssen enthalten sein
+* Nicht in einer Liste häufiger/schwacher Passwörter.
