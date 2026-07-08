@@ -1,4 +1,12 @@
+import java.util.Set;
+
 public final class main {
+    //kleine interne liste
+    static final Set<String> commonPassword = Set.of("password", "Passwort1", "12345678", "Aa345678");
+
+    public static boolean isCommonPassword(String password) {
+        return commonPassword.contains(password.trim().toLowerCase());
+    }
 
     public static boolean hasMinLength(String password, int min){
         if (password == null) { // wenn nichts eingegeben wird, wird sofort abgebrochen
@@ -58,7 +66,7 @@ public final class main {
 
     /*
 
-    public static boolean isCommonPassword(String password); // kleine interne Liste
+
     // Bonus:
     public static boolean containsSpecialChar(String password, String allowed);
     // Optionale Gesamtsicht:

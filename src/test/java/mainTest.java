@@ -103,4 +103,46 @@ class MainTest {
         //THEN -> Vergleich -> Erwartung vs Realität
         assertEquals(expected, actual);
     }
+
+    @Test
+    void isCommonPassword_whenCommonPw_returnsTrue() {
+
+        //Given -> VORBEREITUNG was weiss/ brauche ich alles?
+        String testPw = "password";
+        boolean expected = true;
+
+        //WHEN -> METHodenaufruf -> reality check
+        boolean actual = main.isCommonPassword(testPw);
+
+        //THEN -> Vergleich -> Erwartung vs Realität
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    void isCommonPassword_whenCommonPw_returnsTrue2() {
+
+        //Given -> VORBEREITUNG was weiss/ brauche ich alles?
+        String testPw = "PASSWORD ";
+        boolean expected = true;
+
+        //WHEN -> METHodenaufruf -> reality check
+        boolean actual = main.isCommonPassword(testPw);
+
+        //THEN -> Vergleich -> Erwartung vs Realität
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    void isCommonPassword_whenNotCommonPw_returnsFalse() {
+
+        //Given -> VORBEREITUNG was weiss/ brauche ich alles?
+        String testPw = "Beispiel28";
+        boolean expected = false;
+
+        //WHEN -> METHodenaufruf -> reality check
+        boolean actual = main.isCommonPassword(testPw);
+
+        //THEN -> Vergleich -> Erwartung vs Realität
+        assertEquals(expected, actual);
+    }
 }
